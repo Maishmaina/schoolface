@@ -15,7 +15,7 @@ async function start() {
   const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6);
   let image;
   let canvas;
-  document.body.append("loadng your Images");
+  document.body.append("Upload Image");
   imageUpload.addEventListener("change", async () => {
     if (image) image.remove();
     if (canvas) canvas.remove();
@@ -46,13 +46,6 @@ async function start() {
 
 function loadLabeledImages() {
   const labels = [
-    "Black Widow",
-    "Captain America",
-    "Captain Marvel",
-    "Hawkeye",
-    "Jim Rhodes",
-    "Thor",
-    "Tony Stark",
     "Bernand Bett",
     "Brenda Njeruto",
     "Gilbert Mutai",
