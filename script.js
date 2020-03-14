@@ -54,7 +54,7 @@ function loadLabeledImages() {
     "Thor",
     "Tony Stark",
     "Bernand Bett",
-    "Breda Njeruto",
+    "Brenda Njeruto",
     "Gilbert Mutai",
     "Kelvin Langati",
     "Mark Ngetich",
@@ -67,7 +67,7 @@ function loadLabeledImages() {
       const descriptions = [];
       for (let i = 1; i <= 2; i++) {
         const img = await faceapi.fetchImage(
-          `https://raw.githubusercontent.com/Maishmaina/face-recognition-js/master/labeled_images/${label}/${i}.jpg`
+          `https://raw.githubusercontent.com/Maishmaina/schoolface/master/labeled_images/${label}/${i}.jpg`
         );
         const detections = await faceapi
           .detectSingleFace(img)
