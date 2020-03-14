@@ -52,7 +52,8 @@ function loadLabeledImages() {
     "Kelvin Langati",
     "Mark Ngetich",
     "Vancy Kebut",
-    "Veronica Aoko"
+    "Veronica Aoko",
+    "Daniel maina"
   ];
 
   return Promise.all(
