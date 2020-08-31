@@ -3,7 +3,7 @@ const imageUpload = document.getElementById("imageUpload");
 Promise.all([
   faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
   faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
-  faceapi.nets.ssdMobilenetv1.loadFromUri("/models")
+  faceapi.nets.ssdMobilenetv1.loadFromUri("/models"),
 ]).then(start);
 
 //create method start
@@ -30,14 +30,14 @@ async function start() {
       .withFaceLandmarks()
       .withFaceDescriptors();
     const resizedDetections = faceapi.resizeResults(detections, displaySize);
-    const results = resizedDetections.map(d =>
+    const results = resizedDetections.map((d) =>
       faceMatcher.findBestMatch(d.descriptor)
     );
     results.forEach((result, i) => {
       const box = resizedDetections[i].detection.box;
 
       const drawBox = new faceapi.draw.DrawBox(box, {
-        label: result.toString()
+        label: result.toString(),
       });
       drawBox.draw(canvas);
     });
@@ -53,11 +53,11 @@ function loadLabeledImages() {
     "Mark Ngetich",
     "Vancy Kebut",
     "Veronica Aoko",
-    "Daniel maina"
+    "Daniel maina",
   ];
 
   return Promise.all(
-    labels.map(async label => {
+    labels.map(async (label) => {
       const descriptions = [];
       for (let i = 1; i <= 2; i++) {
         const img = await faceapi.fetchImage(
