@@ -54,6 +54,7 @@ function loadLabeledImages() {
     "Vancy Kebut",
     "Veronica Aoko",
     "Daniel maina",
+    "Joseph Mwai",
   ];
 
   return Promise.all(
