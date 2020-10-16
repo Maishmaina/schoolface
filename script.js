@@ -15,7 +15,7 @@ async function start() {
   const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6);
   let image;
   let canvas;
-  document.body.append("Upload Image");
+  document.body.append("<a href='#'>Verified</a>");
   imageUpload.addEventListener("change", async () => {
     if (image) image.remove();
     if (canvas) canvas.remove();
@@ -55,6 +55,7 @@ function loadLabeledImages() {
     "Veronica Aoko",
     "Daniel maina",
     "Joseph Mwai",
+    "Joseph muturi",
   ];
 
   return Promise.all(
